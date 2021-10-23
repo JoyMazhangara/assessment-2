@@ -65,8 +65,9 @@ console.log(empOne.getSchedule())
     dot or bracket notation.
 */
 
-//CODE HERE
-
+const empTwo = {...empOne}
+empTwo.name = 'Nick'
+console.log(empTwo)
 
 
 //////////////////PROBLEM 2////////////////////
@@ -92,7 +93,23 @@ console.log(empOne.getSchedule())
     the employees array. 
 */
 
-//CODE HERE
+class Manager extends Employee {
+    constructor(name, shifts, employees) {
+    super();
+    this.name = name;
+    this.shifts = shifts;
+    this.employees = employees;
+    }
+    getEmployees() {
+        console.log(`${this.name} manages ${this.employees}`)
+    }
+    addEmployee(emp){
+        this.emp = emp;
+        // console.log(newArr)
+        let newArr2 = this.employees.push(` ${this.emp}`)
+        console.log(newArr2)
+    }
+}
 
 
 
@@ -107,7 +124,8 @@ console.log(empOne.getSchedule())
     employees: Cece and Schmidt
 */
 
-//CODE HERE
+// I LOVE the show New Girl, Cece and Schmidt are hilarious!
+const manager = new Manager('Winston','weekday mornings, weekday afternoons', ['Cece and Schmidt'])
 
 
 /*
@@ -115,7 +133,7 @@ console.log(empOne.getSchedule())
     `manager` object.  
 */
 
-//CODE HERE
+console.log(manager.getEmployees())
 
 /*
     Call the `addEmployee` method on the 
@@ -123,7 +141,7 @@ console.log(empOne.getSchedule())
     'Coach' or whatever name you'd like.
 */
 
-//CODE HERE 
+console.log(manager.addEmployee('Coach'))
 
 /*
     Call the `getEmployees` method on the
@@ -131,4 +149,4 @@ console.log(empOne.getSchedule())
     that an employee was added.
 */
 
-//CODE HERE
+console.log(manager.getEmployees())
