@@ -30,17 +30,14 @@
     'kids'
 */
 
-const pizza = [
-    {
+const pizza = {
+
         name: 'pepperoni',
         price: 12.99,
         category: 'entree',
         popularity: 1, //out of 10, 10 being the least popular
         rating: 5, //out 5 stars, 5 being the best
-        tags: ['large', 'gluten free']
-
-    }
-]
+        tags: ['large', 'gluten free']}
 
 
 
@@ -72,7 +69,8 @@ console.log(pizza.tags[1])
     Print the value of your new price variable.
 */
 
-//CODE HERE
+const price = pizza.price
+console.log(price)
 
 
 /*
@@ -82,7 +80,8 @@ console.log(pizza.tags[1])
     Print the value of your category variable. 
 */
 
-//CODE HERE
+const category = pizza.category
+console.log(category)
 
 
 //////////////////PROBLEM 3////////////////////
@@ -97,7 +96,37 @@ console.log(pizza.tags[1])
     data in some functions that you'll write.
 */
 
-//CODE HERE
+const foodArr = [
+    {"name":"calzone",
+    "category":"entree",
+    "popularity":3, //out of 10, 10 being the least popular
+    "rating":3, //out 5 stars, 5 being the best
+    "tags":['kids','gluten free']},
+
+    {"name":"breadsticks",
+    "category":"appetizer",
+    "popularity":2, //out of 10, 10 being the least popular
+    "rating":3, //out 5 stars, 5 being the best
+    "tags":['kids','gluten free','vegetarian']},
+
+    {"name":"lasagna",
+    "category":"entree",
+    "popularity":3, //out of 10, 10 being the least popular
+    "rating":3, //out 5 stars, 5 being the best
+    "tags":['kids','gluten free']},
+
+    {"name":"salad",
+    "category":"side",
+    "popularity":6, //out of 10, 10 being the least popular
+    "rating":2, //out 5 stars, 5 being the best
+    "tags":['vegetarian','gluten free']},
+
+    {"name":"meatballs",
+    "category":"entree",
+    "popularity":1, //out of 10, 10 being the least popular
+    "rating":5, //out 5 stars, 5 being the best
+    "tags":['kids','dairy free','gluten free']}
+]
 
 
 
@@ -113,11 +142,10 @@ console.log(pizza.tags[1])
     your food objects has.
 */
 
-//CODE HERE
-
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
-
-
+const filteredFood = foodArr.filter(function(elem){
+    return (elem.tags.includes('vegetarian')) 
+})
+    console.log(filteredFood)
 
 //////////////////PROBLEM 5////////////////////
 /* 
@@ -151,14 +179,30 @@ console.log(pizza.tags[1])
         if it is, return objects whose value for the given
         property is greater than the `number` passed in
 
-        If the type isn't `below`, return objects whose
+        If the type isn't `below`, return objects whose  ?? Did you mean to say "If the type is `below`" ??
         value for the given property is less than the 
         `number` passed in
     
     Return the filtered array from the entire function
 */
 
-//CODE HERE
+function filterByProperty(property, number, type) {
+    let filteredArr = []
+    // filteredArr = foodArr.filter(function(elem){
+    //   while (type === 'above') {
+    //       this.property = property
+    //       if (elem.property > number) {
+    //           filteredArr = filteredArr.push(elem)
+    //       }
+    //   } 
+    //   while (type === 'below') {
+    //       if (elem.property < number) {
+    //           filteredArr = filteredArr.push(elem)
+    //       }
+    //   }
+    // })
+    return filteredArr
+}
 
 
 /*
@@ -168,4 +212,4 @@ console.log(pizza.tags[1])
     You'll have to console.log to see the filtered array
 */
 
-//CODE HERE
+console.log(filterByProperty('rating', 3, 'above'))
