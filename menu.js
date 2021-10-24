@@ -157,7 +157,7 @@ const filteredFood = foodArr.filter(function(elem){
 
     Write a function called `filterByProperty`
     that takes in three arguments: `property`, 
-    `number`, and `type. 
+    `number`, and `type`. 
 
     The property will be a string (rating,
     popularity, or price)
@@ -188,7 +188,15 @@ const filteredFood = foodArr.filter(function(elem){
 
 function filterByProperty(property, number, type) {
     let filteredArr = []
-    // filteredArr = foodArr.filter(function(elem){
+    while (type === 'above') {
+    for (let i=0; i < foodArr.length; i++){
+        let [foodArr.rating, foodArr.popularity, ] = property
+        if (foodArr[i].property > number)
+    }
+  }
+  //WHEN I TRIED RUNNING THE CODE BELOW MY TERMINAL GOT STUCK AND THE CODE NEVER FINISHED RUNNING
+    // Let filteredArr = []
+    //filteredArr = foodArr.filter(function(elem){               
     //   while (type === 'above') {
     //       this.property = property
     //       if (elem.property > number) {
