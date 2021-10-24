@@ -21,7 +21,11 @@
     'Welcome back, Andrew'
 */
 
-//CODE HERE
+const greetUser = username => {
+    return `Welcome back, ${username}`
+}
+
+console.log(greetUser('Joy'))
 
 
 
@@ -49,9 +53,15 @@
 
 const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
-//CODE HERE
+function canWeDeliver(zipCode) {
+        if (deliveryAreaZipCodes.includes(zipCode)) {
+            console.log(`You're in our delivery zone!`)
+        } else {
+            console.log(`Sorry, we can't deliver to that address`)
+        }   
+}
 
-
+console.log(canWeDeliver(82205))
 
 /* 
     Problem 2 Continued
@@ -70,8 +80,27 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
     Name your new function `canWeDeliverTwo`.
 */
 
-// CODE HERE
+function canWeDeliverTwo(zipCode) {
+    deliveryAreaZipCodes.forEach(function(element){
+        if (zipCode === element) {
+        console.log(`You're in our delivery zone!`)
+        } else if (zipCode !== element) {
+        console.log(`Sorry, we can't deliver to that address`)  /*I had trouble figuring out how to keep it from repeating
+        over when it didn't match, sorry!
+        */
+        }
+    })
+//   for (let i=0; i < deliveryAreaZipCodes.length; i++) {
+//     if (zipCode === deliveryAreaZipCodes[i]) {
+//     console.log(`You're in our delivery zone!`)
+//    } else {
+//        console.log(`Sorry, we can't deliver to that address`)
+//    }
+//   }
+}
 
+
+console.log(canWeDeliverTwo(85205))
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -106,8 +135,11 @@ const deals = [
     to replace the 15 with a 10.
 */
 
-//CODE HERE
-
+let titles = deals[0].title
+titles = titles.replace('15% Off!', '10% Off!')
+deals[0].title = titles
+  //console.log(titles)
+  console.log(deals)
 
 
 /*
@@ -123,4 +155,8 @@ const deals = [
     to be displaying wrong on the live site.
 */
 
-//CODE HERE
+let descriptions = deals[1].desc
+descriptions = descriptions.replace('   This deal lasts until the end of March! ', 'This deal lasts until the end of April!')
+deals[1].desc = descriptions
+  //console.log(titles)
+  console.log(deals)

@@ -30,7 +30,17 @@
     'kids'
 */
 
-//CODE HERE
+const pizza = [
+    {
+        name: 'pepperoni',
+        price: 12.99,
+        category: 'entree',
+        popularity: 1, //out of 10, 10 being the least popular
+        rating: 5, //out 5 stars, 5 being the best
+        tags: ['large', 'gluten free']
+
+    }
+]
 
 
 
@@ -42,7 +52,7 @@
     Use dot notation to access the value.
 */
 
-//CODE HERE
+console.log(pizza.popularity)
 
 
 /*
@@ -52,7 +62,7 @@
     get the value.
 */
 
-//CODE HERE
+console.log(pizza.tags[1])
 
 
 /*

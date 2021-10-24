@@ -106,8 +106,8 @@ class Manager extends Employee {
     addEmployee(emp){
         this.emp = emp;
         // console.log(newArr)
-        let newArr2 = this.employees.push(` ${this.emp}`)
-        console.log(newArr2)
+        let newEmpArr = this.employees.push(` ${this.emp}`)
+        console.log(newEmpArr)
     }
 }
 
